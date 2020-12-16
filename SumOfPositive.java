@@ -1,20 +1,22 @@
-/*You get an array of numbers, return the sum of all of the positives ones.
-Example [1,-4,7,12] ===> 1 + 7 + 12 = 20
-Note: if there is nothing to sum, the sum is default to 0.*/
-
 public class SumOfPositive {
 
     public static int sum(int[] a) {
+        int result = 0;
 
-            return 0; //Note: if there is nothing to sum, the sum is default to 0.
+        for(int i = 0; i<=a.length-1;i++){
+
+            if (a[i]>0){
+                result+=a[i];
+            }
+        }
+            return result;
         }
 
     public static void main(String[] args) {
-        int[] list0 = new int[]{1,-4,7,12};
+        int[] list0 = new int[]{1,2,3,4,5};
 
-
+        System.out.println(sum(list0));
     }
-
 }
 
 
